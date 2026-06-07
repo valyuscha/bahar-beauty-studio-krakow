@@ -31,6 +31,20 @@ Build a premium modern marketing website for the beauty salon "Moon Beauty Space
 - Custom palette: soft beige / white / warm black (light + dark variants)
 - E2E tested via testing_agent_v3 — 100% backend (7/7) and frontend flows green
 
+## PREMIUM NAIL-STUDIO REDESIGN (2026-06-07)
+Re-positioned the site from a generic beauty salon to a premium **nail studio** brand (per new owner brief). All content rewritten in PL/EN/UA.
+- **Hero**: split layout (master-at-work image left, text right) + rating chip (4.9 / 632+ opinii) + 2 CTAs. Headline "Paznokcie, do których chcesz wracać".
+- **About**: "Więcej niż salon paznokci" + 3 paragraphs + 4 value cards (Precyzja / Komfort / Nowoczesne techniki / Indywidualne podejście).
+- **Services**: editorial category list — Manicure / Przedłużanie / Pedicure / Brwi i rzęsy (no price list); "Pełna oferta" → Booksy.
+- **Why us**: 6-item grid.
+- **Gallery**: filterable tabs (Natural, French, Extensions, Minimal, Elegant, Pedicure) via `GALLERY`/`GALLERY_TABS` in `constants/site.js`.
+- **Reviews**: 4.9 / 632+ opinii marquee.
+- **Booking**: large form (saves to DB) + Zadzwoń + Booksy buttons; service dropdown built from service categories.
+- **Location**: address updated to **Długa 47/1, 31-147 Kraków** + amenities (Wi-Fi, Parking, Płatność kartą, Przyjazne miejsce) + Maps/tel.
+- **NEW Instagram section** (`InstagramFeed.jsx`): image grid + "Obserwuj nas" CTA.
+- Verified end-to-end via testing_agent — 100% backend (7/7) + 100% frontend. Report: `/app/test_reports/iteration_2.json`.
+- NOTE: Booksy (`booksy.com`) and Instagram (`instagram.com`) links are still PLACEHOLDERS in `constants/site.js`.
+
 ## Prioritized Backlog
 ### P1
 - Replace generic `https://booksy.com/` with the salon's real Booksy page (constant `SITE.booksyUrl`)
