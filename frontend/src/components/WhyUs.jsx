@@ -55,22 +55,22 @@ export const WhyUs = () => {
           <ScrollHint label={t.gallery.scrollHint || "Przesuń"} />
         </div>
 
-        {/* Tablet/Desktop: grid */}
-        <div className="hidden sm:grid mt-14 sm:mt-20 grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        {/* Tablet/Desktop: content-width cards, centered */}
+        <div className="hidden sm:flex mt-14 sm:mt-20 flex-wrap justify-center gap-6 max-w-5xl mx-auto">
           {t.why.items.map((item, i) => {
             const Icon = ICONS[i % ICONS.length];
             return (
               <Reveal key={i} delay={(i % 3) * 0.08}>
                 <div
                   data-testid={`why-item-${i}`}
-                  className="group h-full rounded-3xl border border-border/70 bg-card hover:bg-secondary/40 p-8 transition-colors flex flex-col items-start gap-5"
+                  className="group w-fit max-w-md rounded-3xl border border-border/70 bg-card hover:bg-secondary/40 p-6 sm:p-7 transition-colors flex items-start gap-5"
                 >
-                  <div className="h-14 w-14 rounded-2xl bg-secondary text-primary flex items-center justify-center group-hover:scale-105 transition-transform">
-                    <Icon className="h-6 w-6" strokeWidth={1.2} />
+                  <div className="h-12 w-12 shrink-0 rounded-2xl bg-secondary text-primary flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <Icon className="h-5 w-5" strokeWidth={1.2} />
                   </div>
                   <div>
-                    <p className="font-display text-2xl leading-tight">{item.title}</p>
-                    <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                    <p className="font-display text-xl leading-tight whitespace-nowrap">{item.title}</p>
+                    <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>

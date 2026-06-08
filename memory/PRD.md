@@ -45,6 +45,14 @@ Re-positioned the site from a generic beauty salon to a premium **nail studio** 
 - Verified end-to-end via testing_agent — 100% backend (7/7) + 100% frontend. Report: `/app/test_reports/iteration_2.json`.
 - NOTE: Booksy (`booksy.com`) and Instagram (`instagram.com`) links are still PLACEHOLDERS in `constants/site.js`.
 
+## UI Polish + Real Photos + Perf (2026-06-08)
+- Pulled owner's real photos from GitHub repo (valyuscha/moon-beauty-space) into `frontend/public`.
+- About (desktop): fixed quote-card overflow — image + quote now stack vertically, aligned with value cards.
+- Why Us: cards now content-width (icon+text row, `w-fit`), centered flex-wrap instead of stretched grid.
+- Booking: reduced oversized info image (fixed `h-44/h-52`) and address font (`text-xl`).
+- Location: `object-contain` on dark panel so full MOON logo is always visible (was cropped).
+- Performance: optimized all local images via Pillow — 9.67MB → 4.11MB; PNG photos converted to JPG (hero.jpg, aboutUs.jpg) with refs updated.
+
 ## Prioritized Backlog
 ### P1
 - Replace generic `https://booksy.com/` with the salon's real Booksy page (constant `SITE.booksyUrl`)

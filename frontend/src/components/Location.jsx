@@ -20,15 +20,14 @@ export const Location = () => {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="location-map-link"
-              className="group relative min-h-[320px] lg:min-h-[560px] block overflow-hidden"
+              className="group relative min-h-[280px] lg:min-h-[520px] block overflow-hidden bg-[#100f0d]"
             >
               <img
                 src={LOCATION_IMAGE}
                 alt="Moon Beauty Space — Kraków"
                 loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="absolute inset-0 h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/45 via-foreground/10 to-transparent" />
               <div className="absolute bottom-6 right-6 h-12 w-12 rounded-full bg-foreground text-background flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
                 <Navigation className="h-5 w-5" strokeWidth={1.5} />
               </div>

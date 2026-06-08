@@ -19,7 +19,7 @@ const ScrollHint = ({ label }) => (
     </motion.span>
   </div>
 );
-const ABOUT_IMAGE = "/aboutUs.png";
+const ABOUT_IMAGE = "/aboutUs.jpg";
 
 export const About = () => {
   const { t } = useLanguage();
@@ -77,29 +77,27 @@ export const About = () => {
           </div>
         </div>
 
-        {/* Right: image and quote block - horizontal on mobile */}
+        {/* Right: image and quote block - clean vertical stack */}
         <div className="lg:col-span-5">
-          <div className="flex flex-col sm:flex-row gap-4 lg:gap-0">
-            <Reveal delay={0.1} className="sm:flex-1">
-              <div className="relative aspect-[3/4] w-full rounded-3xl overflow-hidden">
-                <img
-                  src={ABOUT_IMAGE}
-                  alt="Salon details"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute -bottom-px left-0 right-0 bg-gradient-to-t from-background/40 to-transparent h-1/3" />
-              </div>
-            </Reveal>
-            <Reveal delay={0.2} className="sm:flex-1">
-              <div className="lg:mt-6 rounded-2xl border border-border/70 bg-card p-6 h-full flex flex-col justify-center">
-                <p className="text-[11px] tracking-luxury uppercase text-muted-foreground">Moon Beauty Space</p>
-                <p className="font-display text-2xl mt-2 leading-snug">
-                  &ldquo;Twoja chwila, nasza dbałość o każdy detal.&rdquo;
-                </p>
-              </div>
-            </Reveal>
-          </div>
+          <Reveal delay={0.1}>
+            <div className="relative aspect-[4/5] w-full rounded-3xl overflow-hidden">
+              <img
+                src={ABOUT_IMAGE}
+                alt="Salon details"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute -bottom-px left-0 right-0 bg-gradient-to-t from-background/40 to-transparent h-1/3" />
+            </div>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <div className="mt-4 rounded-2xl border border-border/70 bg-card p-6">
+              <p className="text-[11px] tracking-luxury uppercase text-muted-foreground">Moon Beauty Space</p>
+              <p className="font-display text-2xl mt-2 leading-snug">
+                &ldquo;Twoja chwila, nasza dbałość o każdy detal.&rdquo;
+              </p>
+            </div>
+          </Reveal>
         </div>
 
         {/* Mobile: values carousel - full width on mobile only */}

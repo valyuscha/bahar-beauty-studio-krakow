@@ -5,7 +5,7 @@ import { Check, ArrowRight } from "lucide-react";
 import { SITE } from "@/constants/site";
 
 // Hero background image - salon interior
-const HERO_BG_IMAGE = "/hero.png";
+const HERO_BG_IMAGE = "/hero.jpg";
 
 export const Hero = () => {
   const { t } = useLanguage();

@@ -230,7 +230,7 @@ export const Booking = () => {
           <div className="lg:col-span-5">
             <Reveal delay={0.1}>
               <div className="rounded-3xl overflow-hidden border border-border/70 bg-card h-full flex flex-col">
-                <div className="aspect-[5/4] relative">
+                <div className="h-44 sm:h-52 relative shrink-0">
                   <img
                     src={BOOKING_IMAGE}
                     alt="Moon Beauty Space"
@@ -243,7 +243,7 @@ export const Booking = () => {
                     <p className="text-[11px] tracking-luxury uppercase text-muted-foreground">
                       {t.location.addressLabel}
                     </p>
-                    <p className="font-display text-2xl mt-1">{SITE.address}</p>
+                    <p className="font-display text-xl mt-1">{SITE.address}</p>
                   </div>
                   <div>
                     <p className="text-[11px] tracking-luxury uppercase text-muted-foreground">
