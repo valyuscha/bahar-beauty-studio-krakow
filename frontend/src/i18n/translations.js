@@ -33,6 +33,8 @@ export const translations = {
         { title: "Nowoczesne techniki", desc: "Sprawdzone metody i najlepsze produkty." },
         { title: "Indywidualne podejście", desc: "Stylizacja dopasowana do Ciebie." },
       ],
+      quote: "Twoja chwila, nasza dbałość o każdy detal.",
+      scrollHint: "Przesuń",
     },
     services: {
       eyebrow: "Usługi",
@@ -189,6 +191,8 @@ export const translations = {
         { title: "Modern techniques", desc: "Proven methods and premium products." },
         { title: "Personal approach", desc: "A style tailored to you." },
       ],
+      quote: "Your moment, our care for every detail.",
+      scrollHint: "Scroll",
     },
     services: {
       eyebrow: "Services",
@@ -341,6 +345,8 @@ export const translations = {
         { title: "Сучасні техніки", desc: "Перевірені методи та найкращі продукти." },
         { title: "Індивідуальний підхід", desc: "Стилізація саме для тебе." },
       ],
+      quote: "Твоя мить, наша турбота про кожну деталь.",
+      scrollHint: "Прокрутіть",
     },
     services: {
       eyebrow: "Послуги",

@@ -94,7 +94,7 @@ export const About = () => {
             <div className="mt-4 rounded-2xl border border-border/70 bg-card p-6">
               <p className="text-[11px] tracking-luxury uppercase text-muted-foreground">Moon Beauty Space</p>
               <p className="font-display text-2xl mt-2 leading-snug">
-                &ldquo;Twoja chwila, nasza dbałość o każdy detal.&rdquo;
+                &ldquo;{t.about.quote}&rdquo;
               </p>
             </div>
           </Reveal>
@@ -122,7 +122,7 @@ export const About = () => {
               );
             })}
           </div>
-          <ScrollHint label="Przesuń" />
+          <ScrollHint label={t.about.scrollHint} />
         </div>
       </div>
     </section>
