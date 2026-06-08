@@ -12,14 +12,14 @@ export const Location = () => {
   return (
     <section id="location" data-testid="location-section" className="py-16 sm:py-32">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,280px)_1fr] gap-6 sm:gap-10 items-center">
           {/* Map / exterior preview — logo image only, rounded */}
           <a
             href={SITE.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="location-map-link"
-            className="group relative block overflow-hidden rounded-[2rem] aspect-square"
+            className="group relative block overflow-hidden rounded-[2rem] aspect-square w-full max-w-[240px] mx-auto sm:max-w-none"
           >
             <img
               src={LOCATION_IMAGE}
