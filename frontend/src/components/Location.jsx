@@ -12,20 +12,20 @@ export const Location = () => {
   return (
     <section id="location" data-testid="location-section" className="py-16 sm:py-32">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
-          {/* Map / exterior preview — separate adaptive image */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+          {/* Map / exterior preview — logo image only, rounded */}
           <a
             href={SITE.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="location-map-link"
-            className="group relative block overflow-hidden rounded-[2rem] border border-border/70 bg-[#100f0d] aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:min-h-[520px]"
+            className="group relative block overflow-hidden rounded-[2rem] aspect-square"
           >
             <img
               src={LOCATION_IMAGE}
               alt="Moon Beauty Space — Kraków"
               loading="lazy"
-              className="absolute inset-0 h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute bottom-6 right-6 h-12 w-12 rounded-full bg-foreground text-background flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
               <Navigation className="h-5 w-5" strokeWidth={1.5} />
