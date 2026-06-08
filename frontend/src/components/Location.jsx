@@ -5,7 +5,6 @@ import { MapPin, Clock, Phone, Navigation, Wifi, Car, CreditCard, Heart } from "
 import { SITE } from "@/constants/site";
 
 const AMENITY_ICONS = [Wifi, Car, CreditCard, Heart];
-const MOON_EMBLEM = "/moon-emblem.png";
 
 const InfoItem = ({ icon: Icon, label, children, delay, testId }) => (
   <Reveal delay={delay}>
@@ -32,30 +31,9 @@ export const Location = () => {
     <section id="location" data-testid="location-section" className="py-16 sm:py-32">
       <div className="max-w-5xl mx-auto px-5 sm:px-8">
         <div className="relative rounded-[2.5rem] border border-border/70 bg-card overflow-hidden">
-          {/* subtle warm glow backdrop */}
-          <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 h-64 w-64 rounded-full bg-primary/15 blur-3xl" />
-
           <div className="relative px-6 py-12 sm:px-14 sm:py-16 text-center">
-            {/* Moon emblem */}
             <Reveal>
-              <a
-                href={SITE.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="location-map-link"
-                className="group mx-auto block h-24 w-24 sm:h-28 sm:w-28 rounded-full overflow-hidden ring-1 ring-border bg-[#0d0c0b] shadow-xl shadow-black/10"
-              >
-                <img
-                  src={MOON_EMBLEM}
-                  alt="Moon Beauty Space"
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-              </a>
-            </Reveal>
-
-            <Reveal delay={0.05}>
-              <span className="mt-6 inline-block text-xs tracking-luxury uppercase text-primary">
+              <span className="inline-block text-xs tracking-luxury uppercase text-primary">
                 {t.location.eyebrow}
               </span>
             </Reveal>
