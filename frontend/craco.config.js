@@ -38,6 +38,11 @@ let webpackConfig = {
     },
     configure: (webpackConfig) => {
 
+      // Disable ForkTsCheckerWebpackPlugin to avoid ajv compatibility issues in CI
+      webpackConfig.plugins = webpackConfig.plugins.filter(
+        (plugin) => plugin.constructor.name !== 'ForkTsCheckerWebpackPlugin'
+      );
+
       // Add ignored patterns to reduce watched directories
         webpackConfig.watchOptions = {
           ...webpackConfig.watchOptions,
