@@ -2,6 +2,12 @@
   "name": "moon-beauty-space",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "dev": "cd frontend && npm start",
+    "build": "cd frontend && npm install --legacy-peer-deps && npm run build",
+    "start": "npx serve -s frontend/build -l 3000",
+    "install:frontend": "cd frontend && npm install --legacy-peer-deps"
+  },
   "dependencies": {
     "serve": "^14.2.0"
   },
