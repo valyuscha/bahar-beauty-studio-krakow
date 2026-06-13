@@ -129,31 +129,7 @@ FRONTEND_BUILD = Path(__file__).parent.parent / "frontend" / "build"
 logger.info("Looking for frontend build at: %s (exists: %s)", FRONTEND_BUILD, FRONTEND_BUILD.exists())
 
 if FRONTEND_BUILD.exists():
-    # Serve static assets (JS, CSS, images)
-    static_dir = FRONTEND_BUILD / "static"
-    if static_dir.exists():
-        app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
-
-    @app.get("/")
-    async def serve_index():
-        """Serve index.html at root."""
-        return FileResponse(str(FRONTEND_BUILD / "index.html"))
-
-    @app.get("/{full_path:path}")
-    async def serve_spa(full_path: str):
-        """Serve the React SPA for any non-API route."""
-        if full_path.startswith("api"):
-            raise HTTPException(status_code=404)
-        # Try to serve the exact file first
-        file_path = FRONTEND_BUILD / full_path
-        if full_path and file_path.exists() and file_path.is_file():
-            return FileResponse(str(file_path))
-        # Otherwise serve index.html for client-side routing
-        return FileResponse(str(FRONTEND_BUILD / "index.html"))
-else:
-    @app.get("/")
-    async def root_fallback():
-        return {"error": "Frontend build not found", "path": str(FRONTEND_BUILD)}
+    app.mount("/", StaticFiles(directory=str(FRONTEND_BUILD), html=True), name="frontend")
 
 
 @app.on_event("shutdown")
