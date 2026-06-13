@@ -134,9 +134,16 @@ if FRONTEND_BUILD.exists():
     if static_dir.exists():
         app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
 
+    @app.get("/")
+    async def serve_index():
+        """Serve index.html at root."""
+        return FileResponse(str(FRONTEND_BUILD / "index.html"))
+
     @app.get("/{full_path:path}")
     async def serve_spa(full_path: str):
         """Serve the React SPA for any non-API route."""
+        if full_path.startswith("api"):
+            raise HTTPException(status_code=404)
         # Try to serve the exact file first
         file_path = FRONTEND_BUILD / full_path
         if full_path and file_path.exists() and file_path.is_file():
