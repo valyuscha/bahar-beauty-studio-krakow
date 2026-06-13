@@ -128,18 +128,9 @@ app.add_middleware(
 FRONTEND_BUILD = Path(__file__).parent.parent / "frontend" / "build"
 logger.info("Looking for frontend build at: %s (exists: %s)", FRONTEND_BUILD, FRONTEND_BUILD.exists())
 
-if FRONTEND_BUILD.exists():
-    # List files for debugging
-    import os as _os
-    build_files = _os.listdir(str(FRONTEND_BUILD))
-    logger.info("Frontend build contents: %s", build_files)
-
-    @app.get("/")
-    async def serve_index():
-        index = FRONTEND_BUILD / "index.html"
-        if index.exists():
-            return FileResponse(str(index))
-        return {"error": "index.html not found"}
+@app.get("/")
+async def serve_index():
+    return {"status": "ok", "frontend_exists": FRONTEND_BUILD.exists()}
 
 
 @app.on_event("shutdown")
