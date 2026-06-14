@@ -14,7 +14,7 @@ export const translations = {
       eyebrow: "Beauty Studio · Centrum Krakowa",
       title: "Piękno w detalach. Stylizacje, do których chce się wracać",
       subtitle:
-        "Manicure, pedicure, brwi i rzęsy w centrum Krakowa. Komfortowa atmosfera i precyzyjne wykonanie.",
+        "Manicure, pedicure, stylizacja brwi i rzęs w sercu Krakowa. Precyzja, higiena i efekt, do którego chce się wracać.",
       ctaPrimary: "Umów wizytę",
       ctaSecondary: "Zobacz realizacje",
       ratings: {
@@ -26,8 +26,8 @@ export const translations = {
     about: {
       eyebrow: "O nas",
       title: "Więcej niż zwykła wizyta",
-      p1: "Bahar Beauty Studio to miejsce stworzone dla osób, które szukają nie tylko efektu, ale także komfortu i chwili dla siebie.",
-      p2: "Dbamy o detale, atmosferę i indywidualne podejście — tak, aby każda wizyta była przyjemnym doświadczeniem.",
+      p1: "Bahar Beauty Studio to miejsce dla osób, które oczekują więcej — perfekcyjnego efektu, komfortu i chwili wyłącznie dla siebie.",
+      p2: "Łączymy precyzyjne wykonanie, sterylność i indywidualne podejście, aby każda wizyta była przyjemnością, a efekt cieszył tygodniami.",
       values: [
         { title: "Precyzja wykonania", desc: "Dbałość o każdy detal" },
         { title: "Komfortowa atmosfera", desc: "Chwila relaksu" },
@@ -40,7 +40,7 @@ export const translations = {
     services: {
       eyebrow: "Usługi",
       title: "Nasza specjalność",
-      subtitle: "Stylizacje dopasowane do Twoich potrzeb — manicure, pedicure, brwi i rzęsy.",
+      subtitle: "Manicure, pedicure, brwi i rzęsy — stylizacje dopasowane do Ciebie, wykonane z dbałością o każdy detal.",
       cta: "Sprawdź dostępne terminy",
       categories: [
         {
@@ -79,11 +79,12 @@ export const translations = {
       eyebrow: "Dlaczego my",
       title: "Dlaczego klientki wybierają Bahar Beauty Studio Krakow",
       items: [
-        { title: "4.9★ Google", desc: "59 opinii" },
-        { title: "5.0★ Booksy", desc: "200+ opinii" },
-        { title: "Dogodna lokalizacja", desc: "Centrum Krakowa" },
-        { title: "Codziennie otwarte", desc: "10:00–21:00" },
-        { title: "Rezerwacja online", desc: "Booksy" },
+        { title: "Najwyższe oceny", desc: "4.9★ Google i 5.0★ Booksy — jakość potwierdzona setkami opinii." },
+        { title: "Trwały, piękny efekt", desc: "Stylizacje, które wyglądają nienagannie przez wiele tygodni." },
+        { title: "Indywidualne podejście", desc: "Kształt, kolor i pielęgnacja dobrane dokładnie pod Ciebie." },
+        { title: "Sterylność i higiena", desc: "Sterylizowane narzędzia i najwyższe standardy bezpieczeństwa." },
+        { title: "Zaufanie klientek", desc: "Setki klientek, które wracają i polecają nas dalej." },
+        { title: "Wygodnie w centrum", desc: "Serce Krakowa, rezerwacja online, otwarte codziennie 10–21." },
       ],
     },
     gallery: {
@@ -98,15 +99,15 @@ export const translations = {
       title: "Opinie klientek",
       cta: "Zobacz wszystkie opinie",
       items: [
-        { text: "Precyzyjne wykonanie i bardzo miła atmosfera.", source: "Google" },
-        { text: "Piękny efekt i wygodna rezerwacja.", source: "Booksy" },
-        { text: "Wracam regularnie i zawsze jestem zadowolona.", source: "Google" },
+        { text: "Piękny efekt i miła atmosfera.", source: "Google" },
+        { text: "Najlepszy manicure w Krakowie!", source: "Booksy" },
+        { text: "Zawsze wracam — polecam każdej!", source: "Google" },
       ],
     },
     booking: {
       eyebrow: "Rezerwacja",
       title: "Zarezerwuj swój termin",
-      subtitle: "Najwygodniej online — wybierz dogodny termin.",
+      subtitle: "Wybierz dogodny termin online — potwierdzenie w kilka sekund, bez czekania.",
       booksy: "Umów w Booksy",
       call: "Zadzwoń",
     },
@@ -155,7 +156,7 @@ export const translations = {
       eyebrow: "Beauty Studio · Central Kraków",
       title: "Beauty in the details. Styles you'll want to come back to",
       subtitle:
-        "Manicure, pedicure, brows and lashes in central Kraków. A comfortable atmosphere and precise work.",
+        "Manicure, pedicure, brow and lash styling in the heart of Kraków. Precision, hygiene and results you'll want to come back to.",
       ctaPrimary: "Book a visit",
       ctaSecondary: "See our work",
       ratings: {
@@ -167,8 +168,8 @@ export const translations = {
     about: {
       eyebrow: "About",
       title: "More than just a visit",
-      p1: "Bahar Beauty Studio is a place created for people looking not only for results, but also for comfort and a moment for themselves.",
-      p2: "We care about details, atmosphere and an individual approach — so that every visit is a pleasant experience.",
+      p1: "Bahar Beauty Studio is made for people who expect more — a flawless result, real comfort and a moment that's entirely their own.",
+      p2: "We combine precise work, strict hygiene and a personal approach, so every visit is a pleasure and the result lasts for weeks.",
       values: [
         { title: "Precise work", desc: "Attention to every detail" },
         { title: "Comfortable atmosphere", desc: "A moment to relax" },
@@ -181,7 +182,7 @@ export const translations = {
     services: {
       eyebrow: "Services",
       title: "Our specialty",
-      subtitle: "Styles tailored to your needs — manicure, pedicure, brows and lashes.",
+      subtitle: "Manicure, pedicure, brows and lashes — styles tailored to you and finished with care for every detail.",
       cta: "Check available times",
       categories: [
         {
@@ -220,11 +221,12 @@ export const translations = {
       eyebrow: "Why us",
       title: "Why clients choose Bahar Beauty Studio Krakow",
       items: [
-        { title: "4.9★ Google", desc: "59 reviews" },
-        { title: "5.0★ Booksy", desc: "200+ reviews" },
-        { title: "Great location", desc: "Central Kraków" },
-        { title: "Open every day", desc: "10:00–21:00" },
-        { title: "Online booking", desc: "Booksy" },
+        { title: "Top-rated studio", desc: "4.9★ on Google and 5.0★ on Booksy — quality backed by hundreds of reviews." },
+        { title: "Long-lasting beauty", desc: "Styles that stay flawless for weeks, not days." },
+        { title: "Personal approach", desc: "Shape, colour and care chosen exactly for you." },
+        { title: "Sterile & safe", desc: "Sterilised tools and the highest hygiene standards every visit." },
+        { title: "Loved by clients", desc: "Hundreds of clients who keep coming back and recommend us." },
+        { title: "Central & convenient", desc: "Heart of Kraków, online booking, open daily 10–21." },
       ],
     },
     gallery: {
@@ -239,15 +241,15 @@ export const translations = {
       title: "Client reviews",
       cta: "See all reviews",
       items: [
-        { text: "Precise work and a very pleasant atmosphere.", source: "Google" },
-        { text: "Beautiful results and easy online booking.", source: "Booksy" },
-        { text: "I come back regularly and I'm always happy.", source: "Google" },
+        { text: "Beautiful result, lovely atmosphere.", source: "Google" },
+        { text: "Best manicure in Kraków!", source: "Booksy" },
+        { text: "I always come back — highly recommend!", source: "Google" },
       ],
     },
     booking: {
       eyebrow: "Booking",
       title: "Reserve your time",
-      subtitle: "It's easiest online — choose a convenient time.",
+      subtitle: "Pick a time online — confirmed in seconds, no waiting.",
       booksy: "Book on Booksy",
       call: "Call us",
     },
@@ -296,7 +298,7 @@ export const translations = {
       eyebrow: "Beauty-студія · Центр Кракова",
       title: "Краса в деталях. Стиль, до якого хочеться повертатися",
       subtitle:
-        "Манікюр, педикюр, брови та вії в центрі Кракова. Комфортна атмосфера та точне виконання.",
+        "Манікюр, педикюр, стилізація брів і вій у серці Кракова. Точність, гігієна та результат, до якого хочеться повертатися.",
       ctaPrimary: "Записатися",
       ctaSecondary: "Переглянути роботи",
       ratings: {
@@ -308,8 +310,8 @@ export const translations = {
     about: {
       eyebrow: "Про нас",
       title: "Більше, ніж звичайний візит",
-      p1: "Bahar Beauty Studio — місце, створене для тих, хто шукає не лише результат, а й комфорт і мить для себе.",
-      p2: "Ми дбаємо про деталі, атмосферу та індивідуальний підхід — щоб кожен візит був приємним досвідом.",
+      p1: "Bahar Beauty Studio — місце для тих, хто очікує більшого: бездоганного результату, комфорту та миті лише для себе.",
+      p2: "Ми поєднуємо точне виконання, стерильність та індивідуальний підхід, щоб кожен візит був задоволенням, а результат тішив тижнями.",
       values: [
         { title: "Точність виконання", desc: "Увага до кожної деталі" },
         { title: "Комфортна атмосфера", desc: "Мить релаксу" },
@@ -322,7 +324,7 @@ export const translations = {
     services: {
       eyebrow: "Послуги",
       title: "Наша спеціалізація",
-      subtitle: "Стилізації під твої потреби — манікюр, педикюр, брови та вії.",
+      subtitle: "Манікюр, педикюр, брови та вії — стилізації під тебе, виконані з увагою до кожної деталі.",
       cta: "Перевірити вільні терміни",
       categories: [
         {
@@ -361,11 +363,12 @@ export const translations = {
       eyebrow: "Чому ми",
       title: "Чому клієнтки обирають Bahar Beauty Studio Krakow",
       items: [
-        { title: "4.9★ Google", desc: "59 відгуків" },
-        { title: "5.0★ Booksy", desc: "200+ відгуків" },
-        { title: "Зручне розташування", desc: "Центр Кракова" },
-        { title: "Відкрито щодня", desc: "10:00–21:00" },
-        { title: "Онлайн-запис", desc: "Booksy" },
+        { title: "Найвищі оцінки", desc: "4.9★ Google і 5.0★ Booksy — якість, підтверджена сотнями відгуків." },
+        { title: "Стійкий, гарний ефект", desc: "Стилізації, що бездоганно виглядають тижнями, а не днями." },
+        { title: "Індивідуальний підхід", desc: "Форма, колір і догляд, підібрані саме під тебе." },
+        { title: "Стерильність і безпека", desc: "Стерилізовані інструменти й найвищі стандарти гігієни щоразу." },
+        { title: "Довіра клієнток", desc: "Сотні клієнток, які повертаються та рекомендують нас." },
+        { title: "Зручно в центрі", desc: "Серце Кракова, онлайн-запис, відкрито щодня 10–21." },
       ],
     },
     gallery: {
@@ -380,15 +383,15 @@ export const translations = {
       title: "Відгуки клієнток",
       cta: "Переглянути всі відгуки",
       items: [
-        { text: "Точне виконання і дуже приємна атмосфера.", source: "Google" },
-        { text: "Гарний результат і зручний запис онлайн.", source: "Booksy" },
-        { text: "Повертаюся регулярно і завжди задоволена.", source: "Google" },
+        { text: "Гарний результат і приємна атмосфера.", source: "Google" },
+        { text: "Найкращий манікюр у Кракові!", source: "Booksy" },
+        { text: "Завжди повертаюся — рекомендую!", source: "Google" },
       ],
     },
     booking: {
       eyebrow: "Запис",
       title: "Забронюй свій час",
-      subtitle: "Найзручніше онлайн — обери вільний час.",
+      subtitle: "Обери зручний час онлайн — підтвердження за кілька секунд, без очікування.",
       booksy: "Записатися на Booksy",
       call: "Зателефонувати",
     },

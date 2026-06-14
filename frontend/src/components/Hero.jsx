@@ -112,7 +112,6 @@ export const Hero = () => {
                   <p className="text-sm text-foreground">
                     {r.score} <span className="text-foreground/80">{r.source}</span>
                   </p>
-                  <p className="text-xs text-foreground/60">{r.count}</p>
                 </div>
               </div>
             ))}

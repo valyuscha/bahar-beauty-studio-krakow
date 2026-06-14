@@ -32,7 +32,6 @@ export const Reviews = () => {
                   <p className="font-display text-2xl text-foreground">
                     {r.score} <span className="text-base text-foreground/70">{r.source}</span>
                   </p>
-                  <p className="text-sm text-muted-foreground">{r.count}</p>
                 </div>
               </div>
             ))}
@@ -48,10 +47,10 @@ export const Reviews = () => {
             <div
               key={i}
               data-testid={`review-card-${i}`}
-              className="w-[300px] sm:w-[380px] shrink-0 rounded-3xl border border-border/70 bg-card p-6 sm:p-8"
+              className="shrink-0 w-max max-w-[88vw] rounded-3xl border border-border/70 bg-card p-6 sm:p-8"
             >
               <Quote className="h-6 w-6 text-primary" strokeWidth={1.4} />
-              <p className="mt-4 font-display text-xl sm:text-2xl leading-snug text-foreground">
+              <p className="mt-4 font-display text-xl sm:text-2xl leading-snug text-foreground whitespace-nowrap">
                 „{r.text}&rdquo;
               </p>
               <div className="mt-6 flex items-center justify-between">
