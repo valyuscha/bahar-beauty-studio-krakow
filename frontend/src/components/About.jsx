@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Reveal from "@/components/Reveal";
 import { Sparkles, HeartHandshake, Gem, Award, ChevronsRight } from "lucide-react";
+import { SITE } from "@/constants/site";
 
 const ICONS = [HeartHandshake, Sparkles, Gem, Award];
 
@@ -47,11 +48,6 @@ export const About = () => {
               {t.about.p2}
             </p>
           </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mt-4 text-foreground/80 text-base sm:text-lg leading-relaxed max-w-xl">
-              {t.about.p3}
-            </p>
-          </Reveal>
 
           {/* Desktop: values grid below text */}
           <div className="hidden sm:grid mt-10 grid-cols-1 sm:grid-cols-2 gap-4">
@@ -83,7 +79,7 @@ export const About = () => {
             <div className="relative aspect-[4/5] w-full rounded-3xl overflow-hidden">
               <img
                 src={ABOUT_IMAGE}
-                alt="Salon details"
+                alt="Bahar Beauty Studio Krakow — wnętrze studio"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                 loading="lazy"
               />
@@ -92,7 +88,7 @@ export const About = () => {
           </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-4 rounded-2xl border border-border/70 bg-card p-6">
-              <p className="text-[11px] tracking-luxury uppercase text-muted-foreground">Moon Beauty Space</p>
+              <p className="text-[11px] tracking-luxury uppercase text-muted-foreground">{SITE.brand}</p>
               <p className="font-display text-2xl mt-2 leading-snug">
                 &ldquo;{t.about.quote}&rdquo;
               </p>

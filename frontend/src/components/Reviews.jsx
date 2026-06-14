@@ -2,7 +2,8 @@ import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SectionHeader from "@/components/SectionHeader";
 import Reveal from "@/components/Reveal";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ArrowUpRight } from "lucide-react";
+import { SITE } from "@/constants/site";
 
 export const Reviews = () => {
   const { t } = useLanguage();
@@ -16,14 +17,25 @@ export const Reviews = () => {
         <SectionHeader eyebrow={t.reviews.eyebrow} title={t.reviews.title} testId="reviews-header" />
 
         <Reveal delay={0.1}>
-          <div className="mt-10 flex items-center justify-center gap-3" data-testid="reviews-rating">
-            <div className="flex items-center gap-1 text-primary">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-current" strokeWidth={0} />
-              ))}
-            </div>
-            <span className="font-display text-2xl text-foreground">4.9</span>
-            <span className="text-sm text-muted-foreground">{t.reviews.rating}</span>
+          <div
+            className="mt-10 flex flex-wrap items-center justify-center gap-6 sm:gap-10"
+            data-testid="reviews-rating"
+          >
+            {[t.hero.ratings.google, t.hero.ratings.booksy].map((r, i) => (
+              <div key={i} data-testid={`reviews-rating-${i}`} className="flex items-center gap-3">
+                <div className="flex items-center gap-0.5 text-primary">
+                  {Array.from({ length: 5 }).map((_, j) => (
+                    <Star key={j} className="h-4 w-4 fill-current" strokeWidth={0} />
+                  ))}
+                </div>
+                <div className="leading-tight text-left">
+                  <p className="font-display text-2xl text-foreground">
+                    {r.score} <span className="text-base text-foreground/70">{r.source}</span>
+                  </p>
+                  <p className="text-sm text-muted-foreground">{r.count}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </Reveal>
       </div>
@@ -43,17 +55,32 @@ export const Reviews = () => {
                 „{r.text}&rdquo;
               </p>
               <div className="mt-6 flex items-center justify-between">
-                <span className="text-sm text-foreground/80">{r.name}</span>
                 <div className="flex items-center gap-0.5 text-primary">
                   {Array.from({ length: 5 }).map((_, j) => (
                     <Star key={j} className="h-3.5 w-3.5 fill-current" strokeWidth={0} />
                   ))}
                 </div>
+                <span className="text-sm text-foreground/60">{r.source}</span>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <Reveal delay={0.15}>
+        <div className="mt-12 flex justify-center">
+          <a
+            href={SITE.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="reviews-cta"
+            className="group inline-flex items-center gap-2 rounded-full border border-foreground/20 hover:bg-foreground hover:text-background px-9 py-4 text-xs tracking-luxury uppercase transition-colors"
+          >
+            {t.reviews.cta}
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" strokeWidth={1.5} />
+          </a>
+        </div>
+      </Reveal>
     </section>
   );
 };

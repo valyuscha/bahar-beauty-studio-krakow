@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Check, ArrowRight } from "lucide-react";
-import { SITE } from "@/constants/site";
+import { Check, ArrowRight, Star } from "lucide-react";
 
 // Hero background image - salon interior
 const HERO_BG_IMAGE = "/hero.jpg";
@@ -25,7 +24,7 @@ export const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={HERO_BG_IMAGE}
-          alt="Moon Beauty Space Salon Interior"
+          alt="Bahar Beauty Studio Krakow — wnętrze salonu"
           className="absolute inset-0 h-full w-full object-cover"
           loading="eager"
         />
@@ -85,15 +84,38 @@ export const Hero = () => {
                 strokeWidth={1.5}
               />
             </button>
-            <a
-              href={SITE.booksyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="hero-cta-booksy"
+            <button
+              onClick={() => scrollTo("gallery")}
+              data-testid="hero-cta-gallery"
               className="inline-flex items-center justify-center rounded-full border border-foreground/70 bg-foreground/20 backdrop-blur-sm hover:bg-foreground/30 hover:border-foreground px-8 py-4 text-xs tracking-luxury uppercase text-foreground transition-colors whitespace-nowrap"
             >
               {t.hero.ctaSecondary}
-            </a>
+            </button>
+          </motion.div>
+
+          {/* Trust badges */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4"
+            data-testid="hero-trust-badges"
+          >
+            {[t.hero.ratings.google, t.hero.ratings.booksy].map((r, i) => (
+              <div key={i} data-testid={`hero-rating-${i}`} className="flex items-center gap-2">
+                <div className="flex items-center gap-0.5 text-primary">
+                  {Array.from({ length: 5 }).map((_, j) => (
+                    <Star key={j} className="h-3.5 w-3.5 fill-current" strokeWidth={0} />
+                  ))}
+                </div>
+                <div className="leading-tight">
+                  <p className="text-sm text-foreground">
+                    {r.score} <span className="text-foreground/80">{r.source}</span>
+                  </p>
+                  <p className="text-xs text-foreground/60">{r.count}</p>
+                </div>
+              </div>
+            ))}
           </motion.div>
 
           {/* Feature Bullets */}
@@ -101,7 +123,7 @@ export const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-10 flex flex-wrap gap-x-8 gap-y-3"
+            className="mt-6 flex flex-wrap gap-x-8 gap-y-3"
           >
             {t.hero.bullets.map((b, i) => (
               <li

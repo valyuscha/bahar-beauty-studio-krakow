@@ -50,7 +50,7 @@ export const InstagramFeed = () => {
               >
                 <img
                   src={src}
-                  alt={`Moon Beauty Space Instagram ${i + 1}`}
+                  alt={`Bahar Beauty Studio Krakow Instagram ${i + 1}`}
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -79,7 +79,7 @@ export const InstagramFeed = () => {
               >
                 <img
                   src={src}
-                  alt={`Moon Beauty Space Instagram ${i + 1}`}
+                  alt={`Bahar Beauty Studio Krakow Instagram ${i + 1}`}
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />

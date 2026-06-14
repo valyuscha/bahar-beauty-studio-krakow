@@ -1,10 +1,10 @@
 import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Reveal from "@/components/Reveal";
-import { MapPin, Clock, Phone, Navigation, Wifi, Car, CreditCard, Heart } from "lucide-react";
+import { MapPin, Clock, Phone, Navigation, CreditCard, CalendarCheck } from "lucide-react";
 import { SITE } from "@/constants/site";
 
-const AMENITY_ICONS = [Wifi, Car, CreditCard, Heart];
+const AMENITY_ICONS = [MapPin, CreditCard, CalendarCheck];
 
 const InfoItem = ({ icon: Icon, label, children, delay, testId }) => (
   <Reveal delay={delay} className="flex-1 min-w-[150px]">
@@ -108,6 +108,21 @@ export const Location = () => {
               </div>
             </Reveal>
           </div>
+
+          {/* Embedded map */}
+          <Reveal delay={0.4}>
+            <div className="relative h-72 sm:h-96 w-full border-t border-border/70">
+              <iframe
+                src={SITE.mapsEmbedUrl}
+                title="Bahar Beauty Studio Krakow — mapa"
+                data-testid="location-map"
+                className="absolute inset-0 h-full w-full"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

@@ -23,7 +23,7 @@ const ScrollHint = ({ label }) => (
 
 export const Gallery = () => {
   const { t } = useLanguage();
-  const [active, setActive] = useState("minimal");
+  const [active, setActive] = useState("paznokcie");
   const images = GALLERY[active] || [];
 
   return (
@@ -80,7 +80,7 @@ export const Gallery = () => {
                 >
                   <img
                     src={src}
-                    alt={`Moon Beauty Space — ${active} ${i + 1}`}
+                    alt={`Bahar Beauty Studio Krakow — ${active} ${i + 1}`}
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover"
                   />
@@ -109,7 +109,7 @@ export const Gallery = () => {
               >
                 <img
                   src={src}
-                  alt={`Moon Beauty Space — ${active} ${i + 1}`}
+                  alt={`Bahar Beauty Studio Krakow — ${active} ${i + 1}`}
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
                 />
