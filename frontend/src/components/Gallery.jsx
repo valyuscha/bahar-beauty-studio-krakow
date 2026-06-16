@@ -56,7 +56,7 @@ export const Gallery = () => {
                   : "border-border/70 text-foreground/70 hover:text-foreground hover:border-foreground/50"
               }`}
             >
-              {tab.label}
+              {t.gallery.tabs?.[tab.id] || tab.label}
             </button>
           ))}
         </div>

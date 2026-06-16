@@ -93,6 +93,12 @@ export const translations = {
       subtitle: "Wybrane stylizacje wykonane w Bahar Beauty Studio Krakow.",
       viewAll: "Zobacz więcej",
       scrollHint: "Przesuń",
+      tabs: {
+        paznokcie: "Paznokcie",
+        pedicure: "Pedicure",
+        natural: "Natural",
+        art: "Art",
+      },
     },
     reviews: {
       eyebrow: "Opinie",
@@ -235,6 +241,12 @@ export const translations = {
       subtitle: "Selected styles created at Bahar Beauty Studio Krakow.",
       viewAll: "See more",
       scrollHint: "Scroll",
+      tabs: {
+        paznokcie: "Nails",
+        pedicure: "Pedicure",
+        natural: "Natural",
+        art: "Art",
+      },
     },
     reviews: {
       eyebrow: "Reviews",
@@ -377,6 +389,12 @@ export const translations = {
       subtitle: "Обрані стилізації, виконані в Bahar Beauty Studio Krakow.",
       viewAll: "Переглянути більше",
       scrollHint: "Прокрутіть",
+      tabs: {
+        paznokcie: "Манікюр",
+        pedicure: "Педикюр",
+        natural: "Натуральні",
+        art: "Арт",
+      },
     },
     reviews: {
       eyebrow: "Відгуки",
